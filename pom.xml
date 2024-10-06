@@ -25,6 +25,7 @@
         <org.mapstruct.version>1.5.5.Final</org.mapstruct.version>
 		<org.springdoc.version>1.8.0</org.springdoc.version>
 		<jjwt.version>0.12.6</jjwt.version>
+        <spring-ai.version>1.0.0-M2</spring-ai.version>
     </properties>
 
 </project>
