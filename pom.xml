@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.3.5</version>
+		<version>3.4.2</version>
 		<relativePath />
 	</parent>
 
@@ -27,7 +27,9 @@
 		<org.mapstruct.version>1.6.2</org.mapstruct.version>
 		<org.springdoc.version>1.8.0</org.springdoc.version>
 		<jjwt.version>0.12.6</jjwt.version>
-		<spring-ai.version>1.0.0-M2</spring-ai.version>
+		<spring.ai.version>1.0.0-M5</spring.ai.version>
+		<owsap.dependency.check>12.0.2</owsap.dependency.check>
+		<owsap.dependency.check.plugin>12.1.0</owsap.dependency.check.plugin>
 		<bootstrap.version>5.3.3</bootstrap.version>
 		<mapstruct.version>1.6.2</mapstruct.version>
 		<lombok.mapstruct.binding.version>0.2.0</lombok.mapstruct.binding.version>
@@ -90,6 +92,11 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.owasp</groupId>
+			<artifactId>dependency-check-maven</artifactId>
+			<version>${owsap.dependency.check}</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -135,6 +142,22 @@
 						</compilerArg>
 					</compilerArgs>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.owasp</groupId>
+				<artifactId>dependency-check-maven</artifactId>
+				<version>${owsap.dependency.check.plugin}</version>
+				<configuration>
+					<assemblyAnalyzerEnabled>false</assemblyAnalyzerEnabled>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>check</goal>
+							<goal>update-only</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
