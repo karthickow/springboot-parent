@@ -26,9 +26,9 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<org.springdoc.version>1.8.0</org.springdoc.version>
 		<jjwt.version>0.12.6</jjwt.version>
-		<spring.ai.version>1.0.0</spring.ai.version>
-		<owsap.dependency.check>12.1.1</owsap.dependency.check>
-		<owsap.dependency.check.plugin>12.1.1</owsap.dependency.check.plugin>
+		<spring.ai.version>1.0.1</spring.ai.version>
+		<owsap.dependency.check>12.1.3</owsap.dependency.check>
+		<owsap.dependency.check.plugin>12.1.3</owsap.dependency.check.plugin>
 		<bootstrap.version>5.3.3</bootstrap.version>
 		<mapstruct.version>1.6.3</mapstruct.version>
 		<lombok.mapstruct.binding.version>0.2.0</lombok.mapstruct.binding.version>
